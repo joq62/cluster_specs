@@ -9,7 +9,7 @@
 
 
 -define(Dir,".").
--define(FileExt,".spec").
+-define(FileExt,".cluster").
 
 %% --------------------------------------------------------------------
 %% Function: available_hosts()
@@ -24,10 +24,12 @@ start()->
 
 check([])->
     io:format("Success, OK ! ~n");
-check([{ok,[{cluster_spec,_Id,Info}]}|T])->
+check([{ok,[{cluster_spec,Info}]}|T])->
     io:format("Checking ~p~n",[Info]),
+    true=proplists:is_defined(name,Info),
     true=proplists:is_defined(deployment_spec,Info),
     true=proplists:is_defined(cookie_str,Info),
+    true=proplists:is_defined(deployment_records,Info),
     check(T).
 
    
