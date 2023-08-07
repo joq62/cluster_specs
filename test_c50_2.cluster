@@ -2,7 +2,7 @@
  [
 	{name,"test_c50_2"},
 	{cookie_str,"b"},
-        {deployment_spec,"test_c50"},
+        {deployment_spec,"test_c50_2"},
 	{deployment_records,[]}
  ]
 }.
