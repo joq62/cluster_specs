@@ -1,0 +1,8 @@
+{cluster_spec,
+ [
+	{name,"test_varmdo"},
+	{cookie_str,"varmdo"},
+        {deployment_spec,"test_varmdo"},
+	{deployment_records,[]}
+ ]
+}.
